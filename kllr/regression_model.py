@@ -504,10 +504,12 @@ class kllr_model():
     linear_regression(x, y, y_err = None, weights = None)
         perform a linear regression give a set of weights
 
-    correlation(self, data_x, data_y, data_z, x, y_err = None, z_err = None, fast_calc = False, kernel_type = None, kernel_width = None)
+    correlation(x, y, z, y_err = None, z_err = None, xrange = None, bins = 25, nBootstrap = 100,
+                fast_calc = False, verbose = False, kernel_type=None, kernel_width=None)
         compute the conditional correlation coefficient conditioned at point x
 
-    covariance(x, y, xrange = None, bins = 60, y_err = None, z_err = None, fast_calc = False, kernel_type = None, kernel_width = None)
+    covariance(x, y, z, y_err = None, z_err = None, xrange = None, bins = 25, nBootstrap = 100,
+               fast_calc = False, verbose = False, kernel_type=None, kernel_width=None)
         compute the conditional correlation coefficient conditioned at point x
 
     residuals(x, y, y_err = None, fast_calc = False, xrange = None, bins = 60,  kernel_type = None, kernel_width = None)
